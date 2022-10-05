@@ -15,8 +15,15 @@ body {
   text-align: center;
 }
 
-#nav-bar {
-  grid-area: nav;
+#home-grid {
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: 1024px auto;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "image greeting"
+    "image bio"
+  ;
 }
 
 #bio-image {
@@ -27,19 +34,25 @@ body {
   grid-area: greeting;
 }
 
-#bio-text {
+#bio-block {
   grid-area: bio;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
 }
 
-#home-grid {
-  margin-bottom: 40px;
-  display: grid;
-  grid-template-columns: 1024px auto;
-  grid-template-rows: auto;
-  grid-template-areas: 
-    "image greeting"
-    "image bio"
-  ;
+#bio-text {
+  grid-column-start: 1;
+  grid-column-end: end;
+}
+
+.language-container {
+  text-align: center;
+}
+
+.language-icon {
+  max-width: 8vw;
+  max-height: 8vw;
 }
 
 #nav-bar {
